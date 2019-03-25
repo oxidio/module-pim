@@ -1,0 +1,49 @@
+{
+  "name": "oxidio/module-pim",
+  "type": "oxideshop-module",
+  "description": "product information management module for oxid shop",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/oxidio/module-pim",
+  "authors": [{"name":  "oxidio"}],
+  "keywords": [
+    "oxid",
+    "module",
+    "product",
+    "article",
+    "attribute",
+    "category"
+  ],
+  "require": {
+    "oxidio/oxidio": "^1",
+
+    "ext-json": "*",
+    "php": ">=7.1"
+  },
+  "config": {
+    "platform": {"php": "7.1"}
+  },
+  "require-dev": {
+    "oxid-esales/oxideshop-demodata-ce": "^6",
+    "oxidio/project": "^1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Oxidio\\": ["src/Oxidio"]
+    },
+    "files": [
+      "src/autoload-files.php"
+    ]
+  },
+  "extra": {
+    "oxideshop": {
+      "whitelist-filter": [
+        "metadata.php"
+      ],
+      "target-directory": "oxidio/module-pim"
+    },
+    "di": "config/pim.php"
+  },
+  "bin": [
+    "bin/oxidio-pim"
+  ]
+}

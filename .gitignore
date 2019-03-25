@@ -1,0 +1,11 @@
+/*
+
+!/bin/
+!/config/
+!/src/
+!/.gitattributes
+!/.gitignore
+!/composer.json
+!/LICENSE
+!/metadata.php
+!/README.md
