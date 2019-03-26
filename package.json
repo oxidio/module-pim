@@ -1,0 +1,33 @@
+{
+  "name": "@oxidio/module-pim",
+  "description": "product information management module for oxid shop",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/oxidio/module-pim#readme",
+  "author": "oxidio",
+  "dependencies": {
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react": "^16",
+    "react-dom": "^16"
+  },
+  "devDependencies": {
+    "webpack": "^4",
+    "webpack-cli": "^3",
+    "css-loader": "^2",
+    "sass-loader": "^7",
+    "node-sass": "^4",
+    "style-loader": "^0",
+    "babel-loader": "^8",
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7"
+  },
+  "scripts": {
+    "watch": "webpack -d --mode development --watch --progress --hide-modules",
+    "build-dev": "webpack -d --mode development --progress --hide-modules",
+    "build-prod": "webpack -p --mode production --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxidio/module-pim.git"
+  }
+}

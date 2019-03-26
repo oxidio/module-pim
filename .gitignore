@@ -3,9 +3,14 @@
 !/bin/
 !/config/
 !/src/
+!/.babelrc.js
+!/.eslintrc.js
 !/.gitattributes
 !/.gitignore
+!/.npmignore
 !/composer.json
 !/LICENSE
 !/metadata.php
+!/package.json
 !/README.md
+!/webpack.config.js

@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Oxidio\\": ["src/Oxidio"]
+      "Oxidio\\": ["src/php"]
     },
     "files": [
       "src/autoload-files.php"
