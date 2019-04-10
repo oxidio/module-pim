@@ -2,9 +2,6 @@
  * Copyright (C) oxidio. See LICENSE file for license details.
  */
 
-$primary-color: green;
-$bg: white;
-body {
-    color: $primary-color;
-    background-color: $bg;
-}
+@import "~bootstrap/scss/bootstrap";
+@import "~open-iconic/font/css/open-iconic-bootstrap.css";
+@import "~@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css";

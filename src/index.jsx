@@ -3,13 +3,27 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import {render} from "react-dom";
+import Container from "react-bootstrap/Container";
+import "@devexpress/dx-react-grid";
+import {
+    Grid,
+    Table,
+    TableHeaderRow
+} from "@devexpress/dx-react-grid-bootstrap4";
+
 import "./styles.scss";
 
-class App extends React.Component {
-    render() {
-        return <h1>{this.props.name}</h1>;
-    }
-}
-
-ReactDOM.render(<App name="oxidio/module-pim" />, document.getElementById("app"));
+const node = document.getElementById("app");
+render(
+    <Container>
+        <Grid
+            columns={[{name: "id", title: "ID"}, {name: "url", title: "Url"}]}
+            rows={JSON.parse(node.dataset.categories)}
+        >
+            <Table />
+            <TableHeaderRow />
+        </Grid>
+    </Container>,
+    node
+);
