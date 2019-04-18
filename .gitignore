@@ -3,6 +3,7 @@
 !/bin/
 !/config/
 !/src/
+!/tests/
 !/.babelrc.js
 !/.eslintrc.js
 !/.gitattributes
@@ -13,4 +14,4 @@
 !/metadata.php
 !/package.json
 !/README.md
-!/webpack.config.js
+!/webpack.*.js

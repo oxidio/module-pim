@@ -5,7 +5,6 @@
 
 namespace Oxidio\Pim;
 
-use OxidEsales\Eshop\Application\Model\Category;
 use OxidEsales\Eshop\Core\ViewConfig;
 use Oxidio\Module\Module;
 use fn;
@@ -15,10 +14,12 @@ class App
 {
     public function __invoke(ViewConfig $vc, Module $module)
     {
-        $categories = fn\traverse(Oxidio\query(function(Category $category) {
+        $categories = fn\traverse(Oxidio\query(function(Model\PimCategory $category, $parentId, $title) {
             return [
-                'id'  => $category->getId(),
-                'url' => $category->getLink(),
+                'id'     => $category->getId(),
+                'parent' => $parentId === $category::ROOT ? null : $parentId,
+                'title'  => $title,
+                'url'    => $category->getLink(),
             ];
         }));
 
@@ -29,7 +30,7 @@ class App
 <html lang="{$vc->getActLanguageAbbr()}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no">
     </head>
     <body>
         <div id="app" data-categories='$categories'></div>
